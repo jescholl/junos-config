@@ -1,5 +1,4 @@
-$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
-$LOAD_PATH.unshift(File.dirname(__FILE__))
+$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 require 'rspec'
 require 'junos-config'
 
@@ -8,5 +7,5 @@ require 'junos-config'
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
 
 RSpec.configure do |config|
-  
+
 end
